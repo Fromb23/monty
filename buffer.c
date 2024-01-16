@@ -28,7 +28,7 @@ void processBuffer(char *buffer, int line_number, stack_t **stack, instruction_t
 	}
 	if (!found)
 	{
-		printf("L%u: unknown instruction \"%s\n", line_number, opcode);
+		fprintf(stderr, "L%u: unknown instruction \"%s\n", line_number, opcode);
 		exit(EXIT_FAILURE);
 	}
 }

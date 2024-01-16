@@ -16,7 +16,7 @@ void pullFunction(stack_t **stack, unsigned int line_number)
 
 	if (value == NULL || !isInteger(value))
 	{
-		printf("L %u: Usage: push integer\n", line_number);
+		fprintf(stderr, "L %u: Usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
@@ -25,7 +25,7 @@ void pullFunction(stack_t **stack, unsigned int line_number)
 	new_node = (stack_t *)malloc(sizeof(stack_t));
 	if (new_node == NULL)
 	{
-		printf("Error: malloc failed\n");
+		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
 
