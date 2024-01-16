@@ -1,4 +1,6 @@
 #include "monty.h"
+#include <stdio.h>
+#include <unistd.h>
 
 extern instruction_t instructions[];
 
@@ -19,13 +21,17 @@ int main(int  argc, char *argv[])
 
 	if (argc != 2)
 	{
-		fprintf(stderr, "USAGE: %s\n", argv[0]);
+		write(2, "USAGE: ", 7);
+		write(2, argv[0], _strlen(argv[0]));
+		write(2, "\n", 1);
 		return (EXIT_FAILURE);
 	}
 	file = fopen(argv[1], "r");
 	if (file == NULL)
 	{
-		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
+		write(2, "Error: Can't open file ", 23);
+		write(2, argv[1], _strlen(argv[1]));
+		write(2, "\n", 1);
 		return (EXIT_FAILURE);
 	}
 	while (fgets(buffer, sizeof(buffer), file) != NULL)
