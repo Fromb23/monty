@@ -13,7 +13,7 @@ void processBuffer(char *buffer, int line_number, stack_t **stack, instruction_t
 	int i, found = 0;
 	char *opcode;
 
-	opcode = custom_strtok(buffer, " ");
+	opcode = strtok(buffer, " \n");
 	if (opcode == NULL)
 		return;
 

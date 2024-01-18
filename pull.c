@@ -12,7 +12,7 @@ void pullFunction(stack_t **stack, unsigned int line_number)
 	int intValue;
 	stack_t *new_node;
 
-	value = custom_strtok(NULL, " ");
+	value = strtok(NULL, " \n");
 
 	if (value == NULL || !isInteger(value))
 	{
