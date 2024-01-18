@@ -10,5 +10,6 @@
 
 void nopFunction(stack_t **stack, unsigned int line_number)
 {
-	return
+	(void)stack;
+	(void)line_number;
 }
