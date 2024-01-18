@@ -45,6 +45,7 @@ void pallFunction(stack_t **stack, unsigned int line_number);
 void pintFunction(stack_t **stack, unsigned int line_number);
 void popFunction(stack_t **stack, unsigned int line_number);
 void swapFunction(stack_t **stack, unsigned int line_number);
+void nopFunction(stack_t **stack, unsigned int line_number);
 void processBuffer(char *buffer, int line_number, stack_t **stack, instruction_t instructions[]);
 
 int _strlen(char *s);
