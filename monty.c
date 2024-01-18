@@ -2,8 +2,6 @@
 #include <stdio.h>
 #include <unistd.h>
 
-extern instruction_t instructions[];
-
 /**
  * main - Entry point of the Monty interpreter.
  * @argc: Number of command line arguments.
