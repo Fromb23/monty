@@ -8,7 +8,8 @@
  * @instructions: The array of instructions.
  **/
 
-void processBuffer(char *buffer, int line_number, stack_t **stack, instruction_t instructions[])
+void processBuffer(char *buffer, int line_number,
+		stack_t **stack, instruction_t instructions[])
 {
 	int i, found = 0;
 	char *opcode;
