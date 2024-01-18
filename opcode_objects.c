@@ -8,7 +8,7 @@ instruction_t *get_instructions(void)
 {
 	instruction_t *instructions;
 
-	instructions = malloc(9 * sizeof(instruction_t));
+	instructions = malloc(11 * sizeof(instruction_t));
 	if (instructions == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
@@ -30,9 +30,13 @@ instruction_t *get_instructions(void)
 	instructions[6].opcode = "add";
 	instructions[6].f = addFunction;
 	instructions[7].opcode = "sub";
-	instructions[7].f= subFunction;
-	instructions[8].opcode = NULL;
-	instructions[8].f = NULL;
+	instructions[7].f = subFunction;
+	instructions[8].opcode = "div";
+	instructions[8].f = divFunction;
+	instructions[9].opcode = "mul";
+	instructions[9].f = mulFunction;
+	instructions[10].opcode = NULL;
+	instructions[10].f = NULL;
 
 	return (instructions);
 }

@@ -20,6 +20,7 @@ int main(int  argc, char *argv[])
 
 	if (argc != 2)
 	{
+		free(instructions);
 		write(2, "USAGE: ", 7);
 		write(2, argv[0], _strlen(argv[0]));
 		write(2, "\n", 1);
