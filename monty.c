@@ -16,6 +16,7 @@ int main(int  argc, char *argv[])
 	char buffer[1024];
 	int lineNumber = 0, len;
 	stack_t *myStack = NULL;
+	instruction_t *instructions = get_instructions();
 
 	if (argc != 2)
 	{
@@ -43,6 +44,7 @@ int main(int  argc, char *argv[])
 	}
 	fclose(file);
 	free_malloc(&myStack);
+	free(instructions);
 
 	return (0);
 }
