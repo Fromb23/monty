@@ -43,6 +43,7 @@ extern instruction_t* instructions;
 
 void subFunction(stack_t **stack, unsigned int line_number);
 void divFunction(stack_t **stack, unsigned int line_number);
+void modFunction(stack_t **stack, unsigned int line_number);
 void mulFunction(stack_t **stack, unsigned int line_number);
 void addFunction(stack_t **stack, unsigned int line_number);
 instruction_t* get_instructions(void);
