@@ -1,5 +1,13 @@
 #include  "monty.h"
 
+/**
+ * divFunction - divides the second top element of the stack
+ * by the top element
+ * @stack: a pointer to the stack
+ * @line_number: line number in the Monty file
+ * Return: void
+ */
+
 void divFunction(stack_t **stack, unsigned int line_number)
 {
 	int value1, value2;
@@ -21,6 +29,13 @@ void divFunction(stack_t **stack, unsigned int line_number)
 
 	popFunction(stack, line_number);
 }
+
+/**
+ * mulFunction - multiplies the top two elements of the stack
+ * @stack: pointer to the stack
+ * @line_number : the line number in the Monty file
+ * Return: void
+ */
 
 void mulFunction(stack_t **stack, unsigned int line_number)
 {
