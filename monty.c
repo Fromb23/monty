@@ -44,6 +44,7 @@ int main(int  argc, char *argv[])
 		processBuffer(buffer, lineNumber, &myStack, instructions);
 	}
 	fclose(file);
+	free_malloc(&myStack);
 
 	return (0);
 }

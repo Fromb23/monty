@@ -39,6 +39,7 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+void free_malloc(stack_t **head);
 int isInteger(const char *str);
 void pullFunction(stack_t **start, unsigned int line_number);
 void pallFunction(stack_t **stack, unsigned int line_number);
